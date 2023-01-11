@@ -2,59 +2,52 @@ import { useRouter } from "next/router";
 import ErrorPage from "next/error";
 import Container from "../../components/container";
 import PostBody from "../../components/post-body";
-import Header from "../../components/header";
+import dynamic from "next/dynamic";
 import PostHeader from "../../components/post-header";
 import Layout from "../../components/layout";
-import { getPostBySlug, getAllPosts, getIntro } from "../../lib/api";
+import { getPostBySlug, getAllPosts } from "../../lib/api";
 import PostTitle from "../../components/post-title";
-import Head from "next/head";
-import { CMS_NAME } from "../../lib/constants";
+
 import markdownToHtml from "../../lib/markdownToHtml";
 import type PostType from "../../interfaces/post";
-// import ReactMarkdown from "react-markdown";
 
-import { Githubintro } from "../../components/githubintro";
-// import markdownStyles from "../components/markdown-styles.module.css";
+// import Githubintro from "../../components/githubintro";
 
 type Props = {
   post: PostType;
-  morePosts: PostType[];
+
   preview?: boolean;
 };
+const Githubintro = dynamic(() => import("../../components/githubintro"), {
+  loading: () => <p>Loading...</p>,
+});
 
-export default function Post({ post, morePosts, preview }: Props) {
+export default function Post({ post, preview }: Props) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
   return (
-    <Layout preview={preview}>
-      <Container>
-        {/* <Header /> */}
-        {router.isFallback ? (
-          <PostTitle>Loading…</PostTitle>
-        ) : (
-          <>
-            <article className="mb-32">
-              {/* <Head>
-                <title>
-                  {post.title} | Next.js Blog Example with {CMS_NAME}
-                </title>
-                <meta property="og:image" content={post.ogImage.url} />
-              </Head>
-               */}
-              <PostHeader title={post.title} coverImage={post.coverImage} />
+    <>
+      <Layout preview={preview}>
+        <Container>
+          {router.isFallback ? (
+            <PostTitle>Loading…</PostTitle>
+          ) : (
+            <>
+              <article className="mb-16">
+                <PostHeader title={post.title} coverImage={post.coverImage} />
 
-              <PostBody content={post.content} />
-
-              <div className="max-w-4xl mx-auto mt-2">
+                <PostBody content={post.content} />
+              </article>
+              <div className="max-w-4xl mx-auto mt-2 mb-16">
                 <Githubintro />
               </div>
-            </article>
-          </>
-        )}
-      </Container>
-    </Layout>
+            </>
+          )}
+        </Container>
+      </Layout>
+    </>
   );
 }
 
@@ -67,11 +60,11 @@ type Params = {
 export async function getStaticProps({ params }: Params) {
   const post = getPostBySlug(params.slug, [
     "title",
-    "date",
+
     "slug",
-    "author",
+
     "content",
-    "ogImage",
+
     "coverImage",
   ]);
   const content = await markdownToHtml(post.content || "");

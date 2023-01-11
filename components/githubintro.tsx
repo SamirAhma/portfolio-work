@@ -1,12 +1,12 @@
 import React from "react";
 
-export const Githubintro = () => {
+const Githubintro = () => {
   return (
     <>
+      {" "}
       <div
         className="w-full p-4 mt-2 text-sm text-gray-900 bg-gray-100 border-2 border-gray-800 border-solid shadow-xl"
         id="markdown-box"
-        style={{ transform: "translate(0px, 0px)" }}
       >
         <div id="markdown-preview">
           <h1 className="text-xl font-bold text-center">
@@ -16,27 +16,25 @@ export const Githubintro = () => {
             A passionate fullstack developer from Malaysia
           </h3>
           <div className="my-2 text-left">
-            {" "}
             <img
               className="h-4 sm:h-6"
               src="https://komarev.com/ghpvc/?username=samirahma&label=Profile%20views&color=0e75b6&style=flat"
               alt="samirahma"
-            />{" "}
+            />
           </div>
           <div className="my-2 text-left">
-            {" "}
             <a href="https://github.com/ryo-ma/github-profile-trophy">
               <img
                 src="https://github-profile-trophy.vercel.app/?username=samirahma"
                 alt="samirahma"
               />
-            </a>{" "}
+            </a>
           </div>
           <div className="my-2">
             💬 Ask me about <b>react, nextjs, gatsbyjs</b>
           </div>
           <div className="my-2">
-            👨‍💻 All of my projects are available at{" "}
+            👨‍💻 All of my projects are available at
             <a
               href="ahmaddin.netlify.app/"
               className="text-blue-700 no-underline"
@@ -46,7 +44,7 @@ export const Githubintro = () => {
             </a>
           </div>
           <div className="my-2">
-            📄 Know about my experiences{" "}
+            📄 Know about my experiences
             <a
               href="ahmaddin.netlify.app/ahmaddin.pdf"
               className="text-blue-700 no-underline"
@@ -339,3 +337,5 @@ export const Githubintro = () => {
     </>
   );
 };
+
+export default Githubintro;

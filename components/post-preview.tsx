@@ -7,18 +7,14 @@ import type Author from "../interfaces/author";
 type Props = {
   title: string;
   coverImage: string;
-  date: string;
-  excerpt: string;
-  author: Author;
+
   slug: string;
 };
 
 const PostPreview = ({
   title,
   coverImage,
-  date,
-  excerpt,
-  author,
+
   slug,
 }: Props) => {
   return (
