@@ -5,12 +5,16 @@ import PostBody from "../../components/post-body";
 import Header from "../../components/header";
 import PostHeader from "../../components/post-header";
 import Layout from "../../components/layout";
-import { getPostBySlug, getAllPosts } from "../../lib/api";
+import { getPostBySlug, getAllPosts, getIntro } from "../../lib/api";
 import PostTitle from "../../components/post-title";
 import Head from "next/head";
 import { CMS_NAME } from "../../lib/constants";
 import markdownToHtml from "../../lib/markdownToHtml";
 import type PostType from "../../interfaces/post";
+// import ReactMarkdown from "react-markdown";
+
+import { Githubintro } from "../../components/githubintro";
+// import markdownStyles from "../components/markdown-styles.module.css";
 
 type Props = {
   post: PostType;
@@ -38,13 +42,14 @@ export default function Post({ post, morePosts, preview }: Props) {
                 </title>
                 <meta property="og:image" content={post.ogImage.url} />
               </Head>
-              <PostHeader
-                title={post.title}
-                coverImage={post.coverImage}
-                date={post.date}
-                author={post.author}
-              /> */}
+               */}
+              <PostHeader title={post.title} coverImage={post.coverImage} />
+
               <PostBody content={post.content} />
+
+              <div className="max-w-4xl mx-auto mt-2">
+                <Githubintro />
+              </div>
             </article>
           </>
         )}
@@ -71,6 +76,11 @@ export async function getStaticProps({ params }: Params) {
   ]);
   const content = await markdownToHtml(post.content || "");
 
+  // const introfile = getIntro(["content"]);
+
+  // const intro = await markdownToHtml(introfile || "");
+  // console.log("intro", intro);
+  console.log(content);
   return {
     props: {
       post: {

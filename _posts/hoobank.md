@@ -3,6 +3,16 @@ title: Hoobank
 categories:
   - ReactJS
   - Tailwind
-image: /images/lht4t544_o.jpg
+coverImage: /images/hoobank.png
 ---
-T﻿his is  a website build using reactjs and tailwind. This beautiful website is  using gradient to make it much more beautiful
+<p>This website was meticulously crafted using ReactJS and Tailwind, two powerful technologies for creating dynamic and visually appealing web experiences.</p>
+<p>I have also incorporated gradient elements throughout the design, adding an extra layer of beauty and elegance to the overall aesthetic.</p> 
+
+<h2>Technology Used</h2>
+<ul>
+  <li>ReactJS</li>
+  <li>Tailwind</li>
+</u
+
+
+
