@@ -10,8 +10,6 @@ A coffee shop website built using GatsbyJs, a static site generator, designed as
 
 T﻿echnology used:
 
-G﻿atsbyjs
-
-Snipcart
-
-C﻿ontentfulCMS
+* G﻿atsbyjs
+* Snipcart
+* C﻿ontentfulCMS

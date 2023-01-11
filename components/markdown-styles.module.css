@@ -6,13 +6,17 @@
 .markdown ul,
 .markdown ol,
 .markdown blockquote {
-  @apply my-6;
+  @apply my-6 list-disc;
 }
 
 .markdown h2 {
-  @apply text-3xl mt-12 mb-4 leading-snug;
+  @apply mt-12 mb-4 text-3xl leading-snug;
 }
 
 .markdown h3 {
-  @apply text-2xl mt-8 mb-4 leading-snug;
+  @apply mt-8 mb-4 text-2xl leading-snug;
+}
+
+.markdown a {
+  @apply mt-8 mb-4 text-2xl leading-snug text-blue-500 underline;
 }
