@@ -2,7 +2,11 @@
 title: Shape Admin Dashboard
 coverImage: /images/shape-admin.png
 ---
-A﻿ fullstack web application dashboard for shape-commerce, as same technologies use by shape-commerce.Admin can view revenue,sales ,Cost ,list of user ,Latest transaction.Admin can also update  or add product , user and order
+<!--StartFragment-->
+
+A comprehensive web application dashboard for Shape-Commerce, using the same technologies as Shape-Commerce. The admin can view revenue, sales, cost, a list of users, and recent transactions. Additionally, the admin can update or add products, users, and orders.
+
+<!--EndFragment-->
 
 [D﻿emo](https://shape-admin.onrender.com/)
 
