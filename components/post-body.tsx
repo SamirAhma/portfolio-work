@@ -38,7 +38,7 @@ const PostBody = ({ content, githubLink, demoLink }: Props) => {
             Open Demo in new tab
           </a>
         )}
-        {demoLink && (
+        {githubLink && (
           <a
             target="_blank"
             rel="noopener noreferrer"

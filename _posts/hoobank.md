@@ -3,6 +3,7 @@ title: Hoobank
 categories:
   - ReactJS
   - Tailwind
+linkDemo: https://hoobankx.netlify.app/
 coverImage: /images/hoobank.png
 ---
 <!--StartFragment-->
@@ -11,7 +12,7 @@ This website was built using ReactJS and Tailwind, which are both strong tools t
 
 <!--EndFragment-->
 
-[D﻿emo](https://hoobankx.netlify.app/)
+
 
 ### Technology Used:
 

@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
 import ErrorPage from "next/error";
 import Container from "../../components/container";
-import PostBody from "../../components/post-body";
 import dynamic from "next/dynamic";
 import Layout from "../../components/layout";
 import { getPostBySlug, getAllPosts } from "../../lib/api";
@@ -19,6 +18,9 @@ const Githubintro = dynamic(() => import("../../components/githubintro"), {
 const PostHeader = dynamic(() => import("../../components/post-header"), {
   loading: () => <p>Loading...</p>,
 });
+const PostBody = dynamic(() => import("../../components/post-body"), {
+  loading: () => <p>Loading...</p>,
+});
 export default function Post({ post, preview }: Props) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
@@ -26,7 +28,7 @@ export default function Post({ post, preview }: Props) {
   }
   return (
     <>
-      <Layout preview={preview}>
+      <Layout>
         <Container>
           {router.isFallback ? (
             <PostTitle>Loading…</PostTitle>
