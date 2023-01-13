@@ -3,19 +3,14 @@ import ErrorPage from "next/error";
 import Container from "../../components/container";
 import PostBody from "../../components/post-body";
 import dynamic from "next/dynamic";
-
 import Layout from "../../components/layout";
 import { getPostBySlug, getAllPosts } from "../../lib/api";
 import PostTitle from "../../components/post-title";
-
 import markdownToHtml from "../../lib/markdownToHtml";
 import type PostType from "../../interfaces/post";
 
-// import Githubintro from "../../components/githubintro";
-
 type Props = {
   post: PostType;
-
   preview?: boolean;
 };
 const Githubintro = dynamic(() => import("../../components/githubintro"), {
@@ -39,8 +34,11 @@ export default function Post({ post, preview }: Props) {
             <>
               <article className="mb-16">
                 <PostHeader title={post.title} coverImage={post.coverImage} />
-
-                <PostBody content={post.content} />
+                <PostBody
+                  content={post.content}
+                  githubLink={post.linkGithub}
+                  demoLink={post.linkDemo}
+                />
               </article>
               <div className="max-w-4xl mx-auto mt-2 mb-16">
                 <Githubintro />
@@ -62,20 +60,13 @@ type Params = {
 export async function getStaticProps({ params }: Params) {
   const post = getPostBySlug(params.slug, [
     "title",
-
     "slug",
-
     "content",
-
     "coverImage",
+    "linkGithub",
+    "linkDemo",
   ]);
   const content = await markdownToHtml(post.content || "");
-
-  // const introfile = getIntro(["content"]);
-
-  // const intro = await markdownToHtml(introfile || "");
-  // console.log("intro", intro);
-  console.log(content);
   return {
     props: {
       post: {
