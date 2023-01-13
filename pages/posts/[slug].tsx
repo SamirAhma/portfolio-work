@@ -3,7 +3,7 @@ import ErrorPage from "next/error";
 import Container from "../../components/container";
 import PostBody from "../../components/post-body";
 import dynamic from "next/dynamic";
-import PostHeader from "../../components/post-header";
+
 import Layout from "../../components/layout";
 import { getPostBySlug, getAllPosts } from "../../lib/api";
 import PostTitle from "../../components/post-title";
@@ -21,7 +21,9 @@ type Props = {
 const Githubintro = dynamic(() => import("../../components/githubintro"), {
   loading: () => <p>Loading...</p>,
 });
-
+const PostHeader = dynamic(() => import("../../components/post-header"), {
+  loading: () => <p>Loading...</p>,
+});
 export default function Post({ post, preview }: Props) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
