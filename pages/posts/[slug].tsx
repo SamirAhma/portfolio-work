@@ -52,7 +52,7 @@ export default function Post({ post }: Props) {
                 />
               </article>
               <div className="max-w-4xl mx-auto mt-2 mb-16">
-                <LazyLoad height={862}>
+                <LazyLoad height={900}>
                   <Githubintro />
                 </LazyLoad>
               </div>
