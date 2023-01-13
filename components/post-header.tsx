@@ -7,14 +7,15 @@ import type Author from "../interfaces/author";
 type Props = {
   title: string;
   coverImage: string;
+  base64: string;
 };
 
-const PostHeader = ({ title, coverImage }: Props) => {
+const PostHeader = ({ title, coverImage, base64 }: Props) => {
   return (
     <>
       <PostTitle>{title}</PostTitle>
       <div className="mb-8 md:mb-16 sm:mx-0">
-        <CoverImage title={title} src={coverImage} />
+        <CoverImage title={title} src={coverImage} base64={base64} />
       </div>
     </>
   );

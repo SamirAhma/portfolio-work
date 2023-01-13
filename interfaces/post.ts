@@ -7,6 +7,7 @@ type PostType = {
   content: string;
   linkGithub: string;
   linkDemo: string;
+  base64: any;
 };
 
 export default PostType;

@@ -8,20 +8,25 @@ import PostTitle from "../../components/post-title";
 import markdownToHtml from "../../lib/markdownToHtml";
 import type PostType from "../../interfaces/post";
 
+import LoadingImagePlaceholder from "../../components/Loading";
+
+import PostHeader from "../../components/post-header";
+import { getPlaiceholder } from "plaiceholder";
+import LazyLoad from "react-lazy-load";
 type Props = {
   post: PostType;
   preview?: boolean;
 };
 const Githubintro = dynamic(() => import("../../components/githubintro"), {
-  loading: () => <p>Loading...</p>,
+  loading: () => <LoadingImagePlaceholder />,
 });
-const PostHeader = dynamic(() => import("../../components/post-header"), {
-  loading: () => <p>Loading...</p>,
-});
+// const PostHeader = dynamic(() => import("../../components/post-header"), {
+//   loading: () => <LoadingImagePlaceholder />,
+// });
 const PostBody = dynamic(() => import("../../components/post-body"), {
-  loading: () => <p>Loading...</p>,
+  loading: () => <LoadingImagePlaceholder />,
 });
-export default function Post({ post, preview }: Props) {
+export default function Post({ post }: Props) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
@@ -35,7 +40,11 @@ export default function Post({ post, preview }: Props) {
           ) : (
             <>
               <article className="mb-16">
-                <PostHeader title={post.title} coverImage={post.coverImage} />
+                <PostHeader
+                  title={post.title}
+                  coverImage={post.coverImage}
+                  base64={post.base64}
+                />
                 <PostBody
                   content={post.content}
                   githubLink={post.linkGithub}
@@ -43,7 +52,9 @@ export default function Post({ post, preview }: Props) {
                 />
               </article>
               <div className="max-w-4xl mx-auto mt-2 mb-16">
-                <Githubintro />
+                <LazyLoad height={862}>
+                  <Githubintro />
+                </LazyLoad>
               </div>
             </>
           )}
@@ -68,12 +79,15 @@ export async function getStaticProps({ params }: Params) {
     "linkGithub",
     "linkDemo",
   ]);
+  const { base64, img } = await getPlaiceholder(post.coverImage);
   const content = await markdownToHtml(post.content || "");
   return {
     props: {
       post: {
         ...post,
         content,
+        coverImage: img,
+        base64,
       },
     },
   };
