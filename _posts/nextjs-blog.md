@@ -1,10 +1,10 @@
 ---
 title: Nextjs Blog
+linkDemo: https://prodboost.netlify.app/
 coverImage: /images/prodboost.png
 ---
 A﻿ simple blog using NextJS and NetlifyCMS
 
-[D﻿emo](https://prodboost.netlify.app/)
 
 [G﻿ithub](https://github.com/SamirAhma/elevate-your-life)
 

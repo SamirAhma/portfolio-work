@@ -1,5 +1,7 @@
 ---
 title: Shape Admin Dashboard
+linkGithub: https://github.com/SamirAhma/shape-admin/tree/main
+linkDemo: https://shape-admin.onrender.com/
 coverImage: /images/shape-admin.png
 ---
 <!--StartFragment-->
@@ -8,9 +10,9 @@ A comprehensive web application dashboard for Shape-Commerce, using the same tec
 
 <!--EndFragment-->
 
-[D﻿emo](https://shape-admin.onrender.com/)
 
-[G﻿ithub](https://github.com/SamirAhma/shape-admin/tree/main)
+
+
 
 #### T﻿echnology used:
 
