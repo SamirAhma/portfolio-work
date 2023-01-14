@@ -12,11 +12,11 @@ type Props = {
 const PostBody = ({ content, githubLink, demoLink }: Props) => {
   return (
     <div className="max-w-4xl mx-auto">
-      <div className="flex">
+      <div className="flex flex-wrap">
         {demoLink && (
           <a
             href={demoLink}
-            className="flex px-4 py-2 mr-4 font-medium text-white bg-green-500 rounded-lg hover:bg-green-600"
+            className="flex px-4 py-2 mb-2 mr-4 font-medium text-white bg-green-500 rounded-lg hover:bg-green-600"
             rel="noopener noreferrer"
           >
             <div className="flex items-center justify-center mr-2">
@@ -28,7 +28,7 @@ const PostBody = ({ content, githubLink, demoLink }: Props) => {
         {demoLink && (
           <a
             href={demoLink}
-            className="flex px-4 py-2 mr-4 font-medium text-white bg-blue-500 rounded-lg hover:bg-blue-600"
+            className="flex px-4 py-2 mb-2 mr-4 font-medium text-white bg-blue-500 rounded-lg hover:bg-blue-600"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -43,7 +43,7 @@ const PostBody = ({ content, githubLink, demoLink }: Props) => {
             target="_blank"
             rel="noopener noreferrer"
             href={githubLink}
-            className="flex px-4 py-2 font-medium text-white bg-black rounded-lg hover:bg-gray-700"
+            className="flex px-4 py-2 mb-2 font-medium text-white bg-black rounded-lg hover:bg-gray-700"
           >
             <div className="flex items-center justify-center mr-2">
               <Image
