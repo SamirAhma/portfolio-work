@@ -1,6 +1,6 @@
 import React from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-
+import Image from "next/image";
 const Githubintro = () => {
   return (
     <>
@@ -64,7 +64,9 @@ const Githubintro = () => {
               href="https://linkedin.com/in/ahmaddin-samir-240b68aa/"
               target="blank"
             >
-              <LazyLoadImage
+              <Image
+                width={24}
+                height={24}
                 className="w-6 h-6"
                 src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg"
                 alt="username"
@@ -75,8 +77,9 @@ const Githubintro = () => {
               href="https://www.hackerrank.com/samsa132"
               target="blank"
             >
-              <LazyLoadImage
-                className="w-6 h-6"
+              <Image
+                width={24}
+                height={24}
                 src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerrank.svg"
                 alt="username"
               />
@@ -86,8 +89,9 @@ const Githubintro = () => {
               href="https://www.leetcode.com/samir1234/"
               target="blank"
             >
-              <LazyLoadImage
-                className="w-6 h-6"
+              <Image
+                width={24}
+                height={24}
                 src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg"
                 alt="username"
               />
@@ -110,7 +114,9 @@ const Githubintro = () => {
               />
             </a>
             <a href="https://getbootstrap.com" target="_blank" rel="noreferrer">
-              <LazyLoadImage
+              <Image
+                width={24}
+                height={24}
                 className="w-6 h-6 mb-4 mr-4 sm:h-10 sm:w-10"
                 src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg"
                 alt="bootstrap"
@@ -121,7 +127,9 @@ const Githubintro = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <LazyLoadImage
+              <Image
+                width={24}
+                height={24}
                 className="w-6 h-6 mb-4 mr-4 sm:h-10 sm:w-10"
                 src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
                 alt="css3"
@@ -139,14 +147,18 @@ const Githubintro = () => {
               />
             </a>
             <a href="https://www.docker.com/" target="_blank" rel="noreferrer">
-              <LazyLoadImage
+              <Image
+                width={24}
+                height={24}
                 className="w-6 h-6 mb-4 mr-4 sm:h-10 sm:w-10"
                 src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg"
                 alt="docker"
               />
             </a>
             <a href="https://expressjs.com" target="_blank" rel="noreferrer">
-              <LazyLoadImage
+              <Image
+                width={24}
+                height={24}
                 className="w-6 h-6 mb-4 mr-4 sm:h-10 sm:w-10"
                 src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg"
                 alt="express"
@@ -203,7 +215,9 @@ const Githubintro = () => {
               />
             </a>
             <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer">
-              <LazyLoadImage
+              <Image
+                width={24}
+                height={24}
                 className="w-6 h-6 mb-4 mr-4 sm:h-10 sm:w-10"
                 src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
                 alt="html5"
@@ -214,14 +228,18 @@ const Githubintro = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <LazyLoadImage
+              <Image
+                width={24}
+                height={24}
                 className="w-6 h-6 mb-4 mr-4 sm:h-10 sm:w-10"
                 src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
                 alt="javascript"
               />
             </a>
             <a href="https://www.linux.org/" target="_blank" rel="noreferrer">
-              <LazyLoadImage
+              <Image
+                width={24}
+                height={24}
                 className="w-6 h-6 mb-4 mr-4 sm:h-10 sm:w-10"
                 src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg"
                 alt="linux"
@@ -232,21 +250,27 @@ const Githubintro = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <LazyLoadImage
+              <Image
+                width={24}
+                height={24}
                 className="w-6 h-6 mb-4 mr-4 sm:h-10 sm:w-10"
                 src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png"
                 alt="matlab"
               />
             </a>
             <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer">
-              <LazyLoadImage
+              <Image
+                width={24}
+                height={24}
                 className="w-6 h-6 mb-4 mr-4 sm:h-10 sm:w-10"
                 src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg"
                 alt="mongodb"
               />
             </a>
             <a href="https://www.mysql.com/" target="_blank" rel="noreferrer">
-              <LazyLoadImage
+              <Image
+                width={24}
+                height={24}
                 className="w-6 h-6 mb-4 mr-4 sm:h-10 sm:w-10"
                 src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
                 alt="mysql"
@@ -260,35 +284,45 @@ const Githubintro = () => {
               />
             </a>
             <a href="https://nodejs.org" target="_blank" rel="noreferrer">
-              <LazyLoadImage
+              <Image
+                width={24}
+                height={24}
                 className="w-6 h-6 mb-4 mr-4 sm:h-10 sm:w-10"
                 src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg"
                 alt="nodejs"
               />
             </a>
             <a href="https://www.python.org" target="_blank" rel="noreferrer">
-              <LazyLoadImage
+              <Image
+                width={24}
+                height={24}
                 className="w-6 h-6 mb-4 mr-4 sm:h-10 sm:w-10"
                 src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
                 alt="python"
               />
             </a>
             <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
-              <LazyLoadImage
+              <Image
+                width={24}
+                height={24}
                 className="w-6 h-6 mb-4 mr-4 sm:h-10 sm:w-10"
                 src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
                 alt="react"
               />
             </a>
             <a href="https://redux.js.org" target="_blank" rel="noreferrer">
-              <LazyLoadImage
+              <Image
+                width={24}
+                height={24}
                 className="w-6 h-6 mb-4 mr-4 sm:h-10 sm:w-10"
                 src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg"
                 alt="redux"
               />
             </a>
             <a href="https://sass-lang.com" target="_blank" rel="noreferrer">
-              <LazyLoadImage
+              <Image
+                width={24}
+                height={24}
                 className="w-6 h-6 mb-4 mr-4 sm:h-10 sm:w-10"
                 src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg"
                 alt="sass"
@@ -306,7 +340,9 @@ const Githubintro = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <LazyLoadImage
+              <Image
+                width={24}
+                height={24}
                 className="w-6 h-6 mb-4 mr-4 sm:h-10 sm:w-10"
                 src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
                 alt="typescript"
@@ -315,7 +351,9 @@ const Githubintro = () => {
           </div>
           <div className="grid grid-cols-1 gap-4 2xl:grid-cols-2">
             <div className="mx-4 mb-4 text-center">
-              <LazyLoadImage
+              <Image
+                width={400}
+                height={150}
                 src="https://github-readme-stats.vercel.app/api/top-langs?username=samirahma&show_icons=true&locale=en&layout=compact"
                 alt="samirahma"
               />

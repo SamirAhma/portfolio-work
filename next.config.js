@@ -7,4 +7,28 @@ const nextConfig = {
 
 const { withPlaiceholder } = require("@plaiceholder/next");
 
-module.exports = withPlaiceholder({});
+module.exports = withPlaiceholder({
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "upload.wikimedia.org",
+        port: "",
+        pathname: "/wikipedia/**",
+      },
+      {
+        protocol: "https",
+        hostname: "github-readme-streak-stats.herokuapp.com",
+        port: "",
+        pathname: "/**",
+      },
+
+      {
+        protocol: "https",
+        hostname: "github-readme-stats.vercel.app",
+        port: "",
+        pathname: "/**",
+      },
+    ],
+  },
+});
