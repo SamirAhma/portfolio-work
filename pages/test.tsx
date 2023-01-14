@@ -2,7 +2,7 @@ import React from "react";
 
 const test = () => {
   return (
-    <div className="container px-5 mx-auto animate-pulse">
+    <div className="container px-5 mx-auto overflow-hidden animate-pulse">
       <div className="mb-16">
         <h1 className="mt-10 mb-12 w-[150px] h-[50px] bg-zinc-500 rounded"></h1>
         <div className="mb-8 md:mb-16 sm:mx-0">
