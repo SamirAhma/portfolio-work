@@ -29,7 +29,7 @@ export default function Post({ post }: Props) {
             demoLink={post.linkDemo}
           />
         </article>
-        <div className="max-w-4xl mx-auto mt-2 mb-16">
+        <div className="max-w-4xl pb-12 mx-auto mt-2 mb-16">
           <LazyLoad height={900}>
             <Githubintro />
           </LazyLoad>
