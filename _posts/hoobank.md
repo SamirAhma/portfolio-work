@@ -3,6 +3,7 @@ title: Hoobank
 categories:
   - ReactJS
   - Tailwind
+linkGithub: https://github.com/SamirAhma/hoobank
 linkDemo: https://hoobankx.netlify.app/
 coverImage: /images/hoobank.png
 ---
